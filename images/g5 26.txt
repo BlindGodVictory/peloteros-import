@@ -1,0 +1,13 @@
+ <div class="producto categoria-G5">
+                    <a href="/guantes/detalle-de-producto-guante-26.html">
+                        <img src="/images/ADIDAS G5 FOTOS/26 G5 FOTO.jpg" alt="Guantes 8" class="imagen-producto">
+                    </a>
+                    <div class="info-producto">
+                        <p class="precio"><span class="precio-original">S/289.00</span> S/249.00</p>
+                        <h3 class="nombre-producto">PREDATOR FREAK PRO 2021</h3>
+                        <p class="categoria">GUANTE ALTERNATIVO CALIDAD G5</p>
+                    </div>
+                    <a href="/guantes/detalle-de-producto-guante-26.html">
+                        <button class="boton-agregar">Comprar</button>
+                    </a>
+                </div>

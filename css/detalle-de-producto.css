@@ -1,0 +1,416 @@
+
+.detalle-producto {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-detalle {
+    display: flex;
+    flex-direction: column;
+    background-color: #9b02ff29;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.imagen-producto-detalle img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.info-producto-detalle {
+    margin-top: -30px;
+    color: #fff;
+}
+
+.info-producto-detalle h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.precio-detalle {
+    font-size: 28px;
+    color: #ff2b6b;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.caracteristicas {
+    margin-bottom: 20px;
+}
+
+.caracteristicas h3 {
+    margin-bottom: 10px;
+}
+
+.caracteristicas ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.caracteristicas ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.caracteristicas ul li i {
+    color: #ff02ddd0;
+    margin-right: 10px;
+}
+
+.botones-detalle {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn-comprar, .btn-agregar-carrito {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar {
+    background-color: #ff02ddd0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-comprar:hover {
+    background-color: #63df2a;
+}
+
+.btn-agregar-carrito {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #444;
+}
+
+
+
+
+
+.tallas-disponibles h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tallas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.talla {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80px;
+    text-align: center;
+}
+
+.talla:hover {
+    background-color: #ff2b6b;
+}
+
+.talla.activa {
+    background-color: #ff2b6b;
+    color: #fff;
+}
+
+
+.disponible {
+    background-color: #45bd10;
+}
+
+.disponible:hover {
+    background-color: #ff2b6b;
+}
+
+
+.agotado {
+    position: relative;
+    background-color: #333;
+    color: #888;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.agotado::before {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #888;
+    transform: rotate(-20deg); /* Rotar para hacer la línea diagonal */
+    transform-origin: center;
+}
+
+
+/* MODAL ZOOM */
+.modal-imagen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.863);
+    overflow: hidden; /* Cambio para evitar que se salga de los límites */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.modal-imagen.active {
+    display: flex; /* Cambiado a flex para mantener la imagen centrada */
+    opacity: 1;
+}
+
+.imagen-ampliada {
+    max-width: 90%;
+    max-height: 80%;
+    transition: transform 0.3s ease-in-out;
+    object-fit: contain; /* Esto ayuda a mantener la imagen centrada y ajustada */
+}
+
+.cerrar-modal {
+    z-index: 4;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #bbb;
+}
+
+/* Para móviles */
+@media screen and (max-width: 768px) {
+    .imagen-ampliada {
+        max-width: 100%;
+        max-height: 70%;
+    }
+    .cerrar-modal {
+        font-size: 40px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Animaciones para el modal */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
+
+.imagen-ampliada.zoom {
+    animation: zoomIn 0.3s ease;
+}
+
+.imagen-ampliada.zoom-out {
+    animation: zoomOut 0.3s ease;
+}
+
+.controles-navegacion {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    
+}
+
+.flecha-izquierda, .flecha-derecha {
+    cursor: pointer;
+    font-size: 2.0rem;
+    color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+
+    .flecha-izquierda, .flecha-derecha {
+        cursor: pointer;
+        font-size: 3.0rem;
+        color: rgba(150, 26, 167, 0.671);
+        margin-left: 210px;
+        margin-right: 210px;
+    }
+
+    .controles-navegacion {
+        bottom: 400px;
+    }
+    
+}
+@media (max-width: 768px) {
+
+    .controles-navegacion {
+        display: none;
+    }
+    .info-producto-detalle {
+        margin-top: 0px;
+        color: #fff;
+    }
+    
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.punto.activo {
+    background-color: #333;
+}
+
+
+
+.agotado:hover {
+    background-color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .talla {
+        flex: 0 1 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tallas {
+        gap: 5px;
+    }
+    
+    .talla {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+.imagen-principal {
+    display: flex;              
+    justify-content: center;    
+    align-items: center;    
+    position: relative;    
+}
+
+.imagen-principal img {
+    width: 600px;              
+    height: 550px;             
+    border-radius: 10px;       
+    margin-bottom: 20px;       
+    transition: width 0.6s, height 0.6s; 
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.miniaturas img {
+    border-radius: 10px;
+    width: 100px;
+    height: 90px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.6s, transform 0.6s;
+}
+
+
+
+@media (max-width: 768px) {
+    .imagen-principal img {
+        width: 100%;
+        height: auto;
+    }
+
+    .miniaturas img {
+        width: 80px;
+        height: 60px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .imagen-principal img {
+        width: 100%;
+        height: auto;
+    }
+
+    .miniaturas {
+        gap: 5px;
+    }
+
+    .miniaturas img {
+        width: 60px;
+        height: 55px;
+    }
+}
+

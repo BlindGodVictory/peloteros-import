@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - PREDATOR MUTATOR PRO GL-G5</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/detalle-de-producto.css">
+    <link rel="stylesheet" href="/css/buscador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+         <!-- Meta tags para SEO -->
+         <meta name="description" content="Encuentra los mejores guantes, chimpunes y accesorios deportivos en Peloteros. Alta calidad y las mejores marcas en un solo lugar.">
+         <meta name="keywords" content="guantes, chimpunes, accesorios deportivos, Peloteros, fútbol, equipo deportivo">
+         <meta name="author" content="Peloteros Import">
+         <meta name="robots" content="index, follow"> <!-- Permite indexar y seguir enlaces -->
+         <meta name="language" content="es"> <!-- Idioma de la página -->
+     
+         <!-- Open Graph para redes sociales (Facebook, LinkedIn, etc.) -->
+         <meta property="og:description" content="Encuentra los mejores guantes, chimpunes y accesorios deportivos en Peloteros. Alta calidad y las mejores marcas en un solo lugar.">
+         <meta property="og:type" content="website">
+         <meta property="og:locale" content="es_ES">
+     
+         <!-- Meta tags adicionales -->
+         <meta name="rating" content="general"> <!-- Clasificación de contenido general -->
+         <meta name="distribution" content="global"> <!-- Distribución global -->
+         <meta name="revisit-after" content="7 days"> <!-- Frecuencia de visita sugerida a motores de búsqueda -->
+     
+         <!-- Favicons e íconos -->
+         <link rel="icon" href="/images/logoPELOTEROS IMPORT ORIGINAL.png">
+         <link rel="apple-touch-icon" href="/images/logoPELOTEROS IMPORT ORIGINAL.png"> <!-- Ícono en dispositivos Apple -->
+</head>
+
+<body>
+    <header class="header">
+        <img src="/images/logoPELOTEROS_IMPORT_ORIGINAL-removebg-preview (TRANSPARENTE).png" alt="Logo Peloteros"
+            class="logo">
+        <div class="hamburguesa" id="hamburguesa">
+            <div class="barra"></div>
+            <div class="barra"></div>
+            <div class="barra"></div>
+        </div>
+        <nav class="menu" id="menu">
+            <a href="/index.html" class="menu-item">Inicio</a>
+            <a href="https://wa.me/962247310" target="_blank" class="menu-item">Contacto</a>
+            <a href="https://www.facebook.com/profile.php?id=61553419446610" target="_blank" class="fa-brands fa-lg fa-facebook" style="color: #ee00ce;" id="facebook"></a>
+            <a href="https://www.instagram.com/peloteros_import/" target="_blank" class="fa-brands fa-lg  fa-instagram" style="color: #ee00ce;" id="instagram"></a>
+            <a href="https://www.tiktok.com/@peloterosimport" target="_blank" class="fa-brands fa-lg  fa-tiktok" style="color: #ee00ce;" id="tiktok"></a>
+        </nav>
+        <!-- Botón de búsqueda -->
+      
+    </header>
+
+    <!-- Modal de búsqueda -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <input type="text" placeholder="Buscar productos..." class="search-input">
+            <button class="btn-buscar">Buscar</button>
+        </div>
+    </div>
+
+    <!-- Modal de imagen ampliada -->
+    <div id="modalImagen" class="modal-imagen">
+        <span id="cerrarModalImagen" class="cerrar-modal">&times;</span>
+        <img id="imagenAmpliada" class="imagen-ampliada">
+    </div>
+
+    <main class="detalle-producto">
+        <div class="contenedor-detalle">
+            <div class="imagen-principal">
+                <img id="imagenPrincipal" src="/images/ADIDAS G5 FOTOS/G5 1.0.jpeg">
+            </div>
+
+            <div id="carousel-indicators" class="carousel-indicators"></div>
+
+            <div class="miniaturas">
+                <img src="/images/ADIDAS G5 FOTOS/G5 1.2.jpeg" alt="Imagen 1" class="miniatura" onclick="cambiarImagen(this)">
+                <img src="/images/ADIDAS G5 FOTOS/G5 1.1.jpeg" alt="Imagen 1" class="miniatura" onclick="cambiarImagen(this)">
+                
+            </div>
+            
+            <!-- Flechas de navegación -->
+            <div class="controles-navegacion">
+                <span class="flecha-izquierda" onclick="cambiarImagenAnterior()">&#9664;</span>
+                <span class="flecha-derecha" onclick="cambiarImagenSiguiente()">&#9654;</span>
+            </div>
+            
+            <div class="info-producto-detalle">
+                <h1>PREDATOR 2025 HIBRIDO</h1>
+                <P>G5</P>
+                <p class="precio-detalle">S/259.00</p>
+                <div class="tallas-disponibles">
+                    <h3>Tallas Disponibles:</h3>
+                    <div class="tallas">
+                        <button class="talla disponible" onclick="seleccionarTalla(this)">8</button>
+                        <button class="talla disponible" onclick="seleccionarTalla(this)">9</button>
+                        <button class="talla disponible" onclick="seleccionarTalla(this)">10</button>
+                    </div>
+                    
+                <div class="caracteristicas">
+                    <h3>Características:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Látex de alta calidad para máximo agarre</li>
+                        <li><i class="fas fa-check"></i> Diseño ergonómico para mayor comodidad</li>
+                        <li><i class="fas fa-check"></i> Disponible en varias tallas y colores</li>
+                    </ul>
+                </div>
+                <div class="botones-detalle">
+                    <a class="btn-comprar" href="https://wa.me/960823217" target="_blank">Comprar Ahora</a>
+                </div>
+
+                
+            </div>
+        </div>
+    </main>
+
+
+    <script src="/js/index.js"></script>
+    <script src="/js/carrusel.js"></script>
+    
+</body>
+
+</html>

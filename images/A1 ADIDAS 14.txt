@@ -1,0 +1,13 @@
+<div class="producto categoria-A1">
+                    <a href="/guantesA1/detalle-de-producto-guante-14-A1.html">
+                        <img src="/images/ADIDAS A1 FOTOS/14 A1 FOTOS.jpg" alt="Guantes 8" class="imagen-producto">
+                    </a>
+                    <div class="info-producto">
+                        <p class="precio"><span class="precio-original">S/250.00</span> S/189.00</p>
+                        <h3 class="nombre-producto">PREDATOR MUTATOR PRO GL </h3>
+                        <p class="categoria">GUANTE ALTERNATIVO CALIDAD A1</p>
+                    </div>
+                    <a href="/guantesA1/detalle-de-producto-guante-14-A1.html">
+                        <button class="boton-agregar">Comprar</button>
+                    </a>
+                </div>
