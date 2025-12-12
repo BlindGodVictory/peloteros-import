@@ -387,7 +387,7 @@ body {
     border: 2px solid #eee;
     border-radius: 15px;
     border-color: #fa1d96;
-    padding: 20px;
+    padding: 32px;
     justify-content: space-around;
     text-decoration: none;
     text-align: center;
@@ -419,6 +419,20 @@ body {
     transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
+.logo-con-nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nombre-logo {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white; /* Cambia si tu fondo es claro */
+  text-align: center;
+}
+
 
 /* Estilos Responsivos */
 @media (min-width: 768px) {
@@ -436,6 +450,20 @@ body {
     }
     .botones-categoria1 {
         gap: 9px;
+    }
+    
+    .logo-con-nombre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .nombre-logo {
+        margin-top: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white; /* Cambia si tu fondo es claro */
+        text-align: center;
     }
   
 }
