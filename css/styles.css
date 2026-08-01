@@ -423,6 +423,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.nombre-marca {
+  margin-top: -15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #e2e2e2; /* Cambia el color si deseas */
+  text-align: center;
 }
 
 .nombre-logo {
